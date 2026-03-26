@@ -7,29 +7,34 @@ public class Poi : MonoBehaviour
 
     [SerializeField] bool poiWaterCheck = false;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        // Check if bool is true and then 'damage' poi
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == watertag && !poiPaper.GetBroken())
         {
             poiWaterCheck = true;
-            Debug.Log("Poi in some water: " + poiWaterCheck);
-            // Bool equels true & make bool fasle when collision exit or when poi brakes
+            //Debug.Log("Poi in some water: " + poiWaterCheck);
+        }
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == watertag && !poiPaper.GetBroken())
+        {
+            poiPaper.WaterLogPoi(Time.deltaTime);
+        }
+        if (poiPaper.GetBroken())
+        {
+            poiWaterCheck = false;
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        poiWaterCheck = false;
-        Debug.Log("Poi in some water: " + poiWaterCheck);
+        if (poiWaterCheck)
+        {
+            poiPaper.UsePoi(1);
+            poiWaterCheck = false;
+            //Debug.Log("Poi in some water: " + poiWaterCheck);
+        }
     }
 }

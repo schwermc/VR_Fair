@@ -50,7 +50,9 @@ public class PoiPaper : MonoBehaviour
     {
         if (usesLeft <= 0 || stregth <= 0)
         {
+            Debug.Log("Poi broke");
             broken = true;
+            gameObject.SetActive(false);
             return;
         }
     }
