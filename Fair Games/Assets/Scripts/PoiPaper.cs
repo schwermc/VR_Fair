@@ -6,16 +6,22 @@ public class PoiPaper : MonoBehaviour
     [SerializeField] int usesLeft;
     [SerializeField] float stregth;
 
-    private int randomNumber;
+    private int randomUses;
+    private int randomStregth;
+
     void Awake()
     {
-        randomNumber = Random.Range(4, 34);
+        randomUses = Random.Range(4, 34);
+        randomStregth = Random.Range(100, 300);
+
+        usesLeft = randomUses;
+        stregth = randomStregth;
     }
 
     public PoiPaper()
     {
-        usesLeft = randomNumber;
-        stregth = 100f;
+        usesLeft = randomUses;
+        stregth = randomStregth;
     }
 
     public PoiPaper(int usesLeft = 17, float stregth = 100f)
@@ -59,6 +65,4 @@ public class PoiPaper : MonoBehaviour
 
     public bool GetBroken() { return broken; }
     public (int, float) GetStatus() { return (usesLeft, stregth); }
-
-    public int NewRandomNumber() { return Random.Range(4, 34); }
 }
