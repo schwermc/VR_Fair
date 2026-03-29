@@ -37,4 +37,9 @@ public class Poi : MonoBehaviour
             //Debug.Log("Poi in some water: " + poiWaterCheck);
         }
     }
+
+    public void DestroyPoi()
+    {
+        Destroy(gameObject);
+    }
 }
