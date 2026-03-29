@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 7719656323248196685}
   - component: {fileID: 6635849736139365255}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,10 +332,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7431111379553770488
 GameObject:
   m_ObjectHideFlags: 0
