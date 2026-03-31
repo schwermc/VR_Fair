@@ -1,17 +1,22 @@
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCrouch : MonoBehaviour
 {
+    [Header ("XR")]
     [SerializeField] XROrigin xrOrigin;
+    [SerializeField] InputActionReference crouchButton;
+
+    [Header("Crouch Info")]
     [SerializeField] float startingHeight;
     [SerializeField] float crouchHeight;
-
-    private bool isCrouched;
+    [SerializeField] private bool isCrouched;
 
     void Start()
     {
         if (xrOrigin == null) { xrOrigin = gameObject.GetComponent<XROrigin>(); }
+        crouchButton.action.started += Crouch;
 
         isCrouched = false;
 
@@ -19,26 +24,14 @@ public class PlayerCrouch : MonoBehaviour
         if (crouchHeight == 0) { crouchHeight = startingHeight / 2; }
     }
 
-    void Update()
+    void OnDestroy()
     {
-        if (Input.GetButtonDown("XRI_Right_PrimaryButton"))
-        {
-            Crouch();
-        }
+        crouchButton.action.started -= Crouch;
     }
 
-    public void Crouch()
+    public void Crouch(InputAction.CallbackContext obj)
     {
-        if (!isCrouched)
-        {
-            isCrouched = true;
-            xrOrigin.CameraYOffset = crouchHeight;
-        }
-
-        if (isCrouched)
-        {
-            isCrouched = false;
-            xrOrigin.CameraYOffset = startingHeight;
-        }
+        isCrouched = !isCrouched;
+        xrOrigin.CameraYOffset = (isCrouched) ? crouchHeight : startingHeight;
     }
 }
