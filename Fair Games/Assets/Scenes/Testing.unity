@@ -3887,9 +3887,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e059fc16035ed48a5417670f45e0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xrOrigin: {fileID: 0}
-  startingHeight: 0
-  crouchHeight: 0
+  xrOrigin: {fileID: 1599034040}
+  crouchButton: {fileID: -5995740150510049257, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  startingHeight: 4
+  crouchHeight: 1.5
+  isCrouched: 0
+--- !u!114 &1599034040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7873184977108000993, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+  m_PrefabInstance: {fileID: 1599034036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599034037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605765618
 GameObject:
   m_ObjectHideFlags: 0
