@@ -12,7 +12,6 @@ public class Poi : MonoBehaviour
         if (collision.gameObject.tag == watertag && !poiPaper.GetBroken())
         {
             poiWaterCheck = true;
-            //Debug.Log("Poi in some water: " + poiWaterCheck);
         }
     }
 
@@ -34,7 +33,6 @@ public class Poi : MonoBehaviour
         {
             poiPaper.UsePoi(1);
             poiWaterCheck = false;
-            //Debug.Log("Poi in some water: " + poiWaterCheck);
         }
     }
 
