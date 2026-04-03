@@ -22,6 +22,7 @@ public class PlayerCrouch : MonoBehaviour
 
         if (startingHeight == 0) { startingHeight = 4; }
         if (crouchHeight == 0) { crouchHeight = startingHeight / 2; }
+        xrOrigin.CameraYOffset = startingHeight;
     }
 
     void OnDestroy()

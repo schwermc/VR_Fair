@@ -9,11 +9,6 @@ public class PoiBasket : MonoBehaviour
     [Header ("Poi")]
     [SerializeField] GameObject poiPrefab;
 
-    void Update()
-    {
-        
-    }
-
     public void GrabSpawnClone()
     {
         GameObject clone = Instantiate(poiPrefab, interactor.transform.position, Quaternion.identity);
