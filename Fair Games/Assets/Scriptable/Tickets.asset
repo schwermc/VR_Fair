@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb04eb95119bc204086d5672b9f973ed, type: 3}
   m_Name: Tickets
   m_EditorClassIdentifier: 
+  currentAmount: 300
+  maxAmount: 1000000000
