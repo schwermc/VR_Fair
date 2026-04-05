@@ -823,6 +823,8 @@ MonoBehaviour:
   interactionManager: {fileID: 163788030}
   interactor: {fileID: 777277238}
   poiPrefab: {fileID: 5407975688299703562, guid: 456519deb6b6062488ea2f7f62dc2be5, type: 3}
+  currency: {fileID: 11400000, guid: 063197ce286b39a488f1506e2e9089d7, type: 2}
+  decreaseAmount: 10
 --- !u!114 &186054969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4238,6 +4240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451ff17b3550a8742a309426dc39f582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currency: {fileID: 11400000, guid: 063197ce286b39a488f1506e2e9089d7, type: 2}
+  increaseTickets: 5
 --- !u!1 &1628303939
 GameObject:
   m_ObjectHideFlags: 0
