@@ -3695,6 +3695,7 @@ GameObject:
   - component: {fileID: 1514380827}
   - component: {fileID: 1514380826}
   - component: {fileID: 1514380825}
+  - component: {fileID: 1514380828}
   m_Layer: 0
   m_Name: Pool
   m_TagString: Water
@@ -3788,6 +3789,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514380823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1514380828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514380823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2651bd5353bc6f44fa7d229b66038c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2504238802554018476, guid: 49f8658b7238a8649b27c3b20f9ab6e7, type: 3}
+  spawner: {fileID: 1514380824}
 --- !u!1 &1535003456
 GameObject:
   m_ObjectHideFlags: 0
