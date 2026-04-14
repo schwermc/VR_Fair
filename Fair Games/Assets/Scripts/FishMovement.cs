@@ -5,13 +5,13 @@ public class FishMovement : MonoBehaviour
     public Vector3 vector;
 
     [SerializeField] Transform fishTrans;
-    [SerializeField] float distance1;
-    [SerializeField] float distance2;
-    [SerializeField] float distance3;
     [SerializeField] float speed;
     [SerializeField] float rDist = 1f;
     [SerializeField] float rSpeed = 2.5f;
 
+    private float distance1;
+    private float distance2;
+    private float distance3;
     private float movementX;
     private float movementY;
     private float movementZ;

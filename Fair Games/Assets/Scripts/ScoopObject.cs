@@ -7,12 +7,20 @@ public class ScoopObject : MonoBehaviour
     [SerializeField] float timeTouched;
     [SerializeField] float timeAlive;
 
+    [Header("Code Info")]
+    [SerializeField] float minTT = 2f;
+    [SerializeField] float maxTT = 4f;
+
     private int ticketAmount;
 
     void Awake()
     {
+        if (maxTT <= minTT)
+        {
+            maxTT = minTT + 2;
+        }
         timeAlive = Random.Range(100, 300);
-        timeTouched = Random.Range(7, 15);
+        timeTouched = Random.Range(minTT, maxTT);
         ticketAmount = Mathf.RoundToInt(timeTouched) / 3;
     }
 

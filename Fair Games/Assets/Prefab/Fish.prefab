@@ -152,6 +152,8 @@ MonoBehaviour:
   touched: 0
   timeTouched: 0
   timeAlive: 0
+  minTT: 1
+  maxTT: 3
 --- !u!114 &4057717477989267836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vector: {x: 0, y: 0, z: 0}
   fishTrans: {fileID: 7268013521982218482}
+  speed: 0
+  rDist: 1
+  rSpeed: 0.5
 --- !u!1 &9212493066811248495
 GameObject:
   m_ObjectHideFlags: 0
