@@ -27,7 +27,11 @@ public class ObjectSpawner : MonoBehaviour
 
     Vector3 SpawnAtRandomPosition()
     {
-        return spawner.transform.position + new Vector3(Random.Range(-spawnerSize.x / 2, spawnerSize.x / 2), Random.Range(-spawnerSize.y / 2, spawnerSize.y / 2), Random.Range(-spawnerSize.z / 2, spawnerSize.z / 2));
+        float x = spawnerSize.x / 2;
+        float y = spawnerSize.y / 2;
+        float z = spawnerSize.z / 2;
+
+        return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
     }
 
     void SpawnObject()

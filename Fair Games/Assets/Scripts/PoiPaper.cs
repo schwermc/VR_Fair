@@ -5,9 +5,11 @@ public class PoiPaper : MonoBehaviour
     [SerializeField] bool broken = false;
     [SerializeField] int usesLeft;
     [SerializeField] float stregth;
+    [SerializeField] Material handleColor;
 
     private int randomUses;
     private int randomStregth;
+    private Color color;
 
     void Awake()
     {
@@ -16,6 +18,29 @@ public class PoiPaper : MonoBehaviour
 
         usesLeft = randomUses;
         stregth = randomStregth;
+    }
+
+    void Start()
+    {
+        color = handleColor.color;
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.gameObject.transform.root.CompareTag("Fish"))
+        {
+            handleColor.color = color * 3;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+
+        if (collision.gameObject.transform.root.CompareTag("Fish"))
+        {
+            handleColor.color = color;
+        }
     }
 
     public PoiPaper()

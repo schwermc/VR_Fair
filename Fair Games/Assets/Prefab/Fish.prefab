@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2527891413871953814}
   - component: {fileID: 4970213909042899712}
   - component: {fileID: 2901388043761583395}
+  - component: {fileID: 4057717477989267836}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +152,20 @@ MonoBehaviour:
   touched: 0
   timeTouched: 0
   timeAlive: 0
+--- !u!114 &4057717477989267836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504238802554018476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16570520027423440bc6d37369827ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vector: {x: 0, y: 0, z: 0}
+  fishTrans: {fileID: 7268013521982218482}
 --- !u!1 &9212493066811248495
 GameObject:
   m_ObjectHideFlags: 0
