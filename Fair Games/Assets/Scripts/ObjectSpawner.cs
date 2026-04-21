@@ -26,7 +26,8 @@ public class ObjectSpawner : MonoBehaviour
         float y = spawnerSize.y / 2;
         float z = spawnerSize.z / 2;
 
-        return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
+        //return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
+        return spawner.transform.position + new Vector3(Random.Range(-x + (x/2), x - (x/2)), Random.Range(-y + (y/2), y - (y/2)), Random.Range(-z + (z/2), z - (z/2)));
     }
 
     public void SpawnObject()
