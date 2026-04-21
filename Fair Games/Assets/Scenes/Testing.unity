@@ -1305,7 +1305,7 @@ PrefabInstance:
     - target: {fileID: -8236735884912241010, guid: 459aa7a8946e64140889f688d8e4c95a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 51e5bec88a3ea934d86336c4f17d886f, type: 2}
+      objectReference: {fileID: 2100000, guid: be2592145cb5021419715a1767ea845a, type: 2}
     - target: {fileID: -6528881848245172288, guid: 459aa7a8946e64140889f688d8e4c95a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2928,7 +2928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717485407320430799, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1717485407320430799, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2969,6 +2969,26 @@ PrefabInstance:
     - target: {fileID: 2062203654633423477, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
       propertyPath: m_Name
       value: Pool
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721583189423695829, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62eb59f1ee0f4a9448b447fc4a86e414, type: 2}
+    - target: {fileID: 7007277025292536928, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      propertyPath: m_Size.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007277025292536928, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      propertyPath: m_Size.z
+      value: 0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331902989121967214, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331902989121967214, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0467
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

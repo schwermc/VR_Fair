@@ -151,7 +151,7 @@ MonoBehaviour:
   destroyScooped:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5237605637654330298, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+      - m_Target: {fileID: 3261175363412439460, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
         m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
         m_MethodName: SpawnObject
         m_Mode: 1
@@ -167,8 +167,8 @@ MonoBehaviour:
   touched: 0
   timeTouched: 0
   timeAlive: 0
-  minTT: 1
-  maxTT: 3
+  minTT: 0.05
+  maxTT: 0.1
 --- !u!114 &4057717477989267836
 MonoBehaviour:
   m_ObjectHideFlags: 0

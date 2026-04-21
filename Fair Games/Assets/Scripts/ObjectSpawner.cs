@@ -1,11 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
     [SerializeField] Transform spawner;
+    [SerializeField] float increaseHeight = 1f;
 
     private Vector3 spawnerSize;
+    private bool start = false;
 
     void Awake()
     {
@@ -14,10 +17,12 @@ public class ObjectSpawner : MonoBehaviour
 
     void Start()
     {
+        start = true;
         SpawnObject();
         SpawnObject();
         SpawnObject();
         SpawnObject();
+        start = false;
     }
 
     Vector3 SpawnAtRandomPosition()
@@ -32,6 +37,12 @@ public class ObjectSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        Instantiate(prefab, SpawnAtRandomPosition(), Quaternion.identity);
+        Vector3 vector = SpawnAtRandomPosition();
+        if (!start)
+        {
+            vector.y += increaseHeight;
+        }
+
+        Instantiate(prefab, vector, Quaternion.identity);
     }
 }

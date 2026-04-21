@@ -26,7 +26,7 @@ public class ScoopObject : MonoBehaviour, IEventContainer
         }
         timeAlive = Random.Range(100, 300);
         timeTouched = Random.Range(minTT, maxTT);
-        ticketAmount = Mathf.RoundToInt(timeTouched) / 3;
+        ticketAmount = Mathf.RoundToInt(timeAlive) % 10;
     }
 
     void Update()
