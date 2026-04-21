@@ -22,7 +22,7 @@ public class PoiPaper : MonoBehaviour
 
     void Start()
     {
-        color = handleColor.color;
+        BaseColor();
     }
 
     void OnTriggerEnter(Collider collision)
@@ -30,7 +30,7 @@ public class PoiPaper : MonoBehaviour
 
         if (collision.gameObject.transform.root.CompareTag("Fish"))
         {
-            handleColor.color = color * 3;
+            handleColor.color = Color.white;
         }
     }
 
@@ -39,7 +39,7 @@ public class PoiPaper : MonoBehaviour
 
         if (collision.gameObject.transform.root.CompareTag("Fish"))
         {
-            handleColor.color = color;
+            BaseColor();
         }
     }
 
@@ -83,6 +83,7 @@ public class PoiPaper : MonoBehaviour
         {
             Debug.Log("Poi broke");
             broken = true;
+            BaseColor();
             gameObject.SetActive(false);
             return;
         }
@@ -90,4 +91,16 @@ public class PoiPaper : MonoBehaviour
 
     public bool GetBroken() { return broken; }
     public (int, float) GetStatus() { return (usesLeft, stregth); }
+
+    void BaseColor() { handleColor.color = color; }
+
+    private void OnApplicationQuit()
+    {
+        BaseColor();
+    }
+
+    void OnDestroy()
+    {
+        BaseColor();
+    }
 }

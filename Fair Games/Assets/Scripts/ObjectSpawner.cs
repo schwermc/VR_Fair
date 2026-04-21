@@ -1,11 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
     [SerializeField] Transform spawner;
+    [SerializeField] float increaseHeight = 1f;
 
     private Vector3 spawnerSize;
+    private bool start = false;
 
     void Awake()
     {
@@ -14,15 +17,12 @@ public class ObjectSpawner : MonoBehaviour
 
     void Start()
     {
+        start = true;
         SpawnObject();
         SpawnObject();
         SpawnObject();
         SpawnObject();
-    }
-
-    void Update()
-    {
-        
+        start = false;
     }
 
     Vector3 SpawnAtRandomPosition()
@@ -31,11 +31,18 @@ public class ObjectSpawner : MonoBehaviour
         float y = spawnerSize.y / 2;
         float z = spawnerSize.z / 2;
 
-        return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
+        //return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
+        return spawner.transform.position + new Vector3(Random.Range(-x + (x/2), x - (x/2)), Random.Range(-y + (y/2), y - (y/2)), Random.Range(-z + (z/2), z - (z/2)));
     }
 
-    void SpawnObject()
+    public void SpawnObject()
     {
-        Instantiate(prefab, SpawnAtRandomPosition(), Quaternion.identity);
+        Vector3 vector = SpawnAtRandomPosition();
+        if (!start)
+        {
+            vector.y += increaseHeight;
+        }
+
+        Instantiate(prefab, vector, Quaternion.identity);
     }
 }
