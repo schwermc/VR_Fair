@@ -20,11 +20,6 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObject();
     }
 
-    void Update()
-    {
-        
-    }
-
     Vector3 SpawnAtRandomPosition()
     {
         float x = spawnerSize.x / 2;

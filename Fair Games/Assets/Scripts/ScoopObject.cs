@@ -30,7 +30,7 @@ public class ScoopObject : MonoBehaviour
 
         if (timeAlive <= 0)
         {
-            Destroy(transform.root.gameObject);
+            DestroyFish();
         }
 
         if (touched)
@@ -41,7 +41,7 @@ public class ScoopObject : MonoBehaviour
         if (timeTouched <= 0 && timeAlive > 0)
         {
             currency.addToCurrency(ticketAmount);
-            Destroy(transform.root.gameObject);
+            DestroyFish();
         }
     }
 
@@ -59,5 +59,10 @@ public class ScoopObject : MonoBehaviour
         {
             touched = false;
         }
+    }
+
+    public void DestroyFish()
+    {
+        Destroy(transform.root.gameObject);
     }
 }
