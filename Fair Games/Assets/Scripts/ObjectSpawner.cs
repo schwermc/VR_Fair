@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public EventObject eventObject;
-
     [SerializeField] GameObject prefab;
     [SerializeField] Transform spawner;
 
@@ -20,7 +18,6 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObject();
         SpawnObject();
         SpawnObject();
-        eventObject.eventContainer._event.AddListener(SpawnObject);
     }
 
     Vector3 SpawnAtRandomPosition()
@@ -32,7 +29,7 @@ public class ObjectSpawner : MonoBehaviour
         return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
     }
 
-    void SpawnObject()
+    public void SpawnObject()
     {
         Instantiate(prefab, SpawnAtRandomPosition(), Quaternion.identity);
     }

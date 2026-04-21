@@ -150,7 +150,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyScooped:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5237605637654330298, guid: d03e9687c07945e45b8c0c9d6b9dcf74, type: 3}
+        m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
+        m_MethodName: SpawnObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   currency: {fileID: 11400000, guid: 063197ce286b39a488f1506e2e9089d7, type: 2}
   touched: 0
   timeTouched: 0
@@ -173,7 +185,7 @@ MonoBehaviour:
   fishTrans: {fileID: 7268013521982218482}
   speed: 0
   rDist: 1
-  rSpeed: 0.5
+  rSpeed: 0.25
 --- !u!1 &9212493066811248495
 GameObject:
   m_ObjectHideFlags: 0
