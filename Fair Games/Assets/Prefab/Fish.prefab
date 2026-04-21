@@ -148,6 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05cafaa342cb324797aba2d38a04bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyScooped:
+    m_PersistentCalls:
+      m_Calls: []
   currency: {fileID: 11400000, guid: 063197ce286b39a488f1506e2e9089d7, type: 2}
   touched: 0
   timeTouched: 0

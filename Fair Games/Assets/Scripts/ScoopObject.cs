@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ScoopObject : MonoBehaviour
+public class ScoopObject : MonoBehaviour, IEventContainer
 {
+    [SerializeField]
+    private UnityEvent destroyScooped;
+    public UnityEvent _event { get { return destroyScooped; } }
+
     [SerializeField] Currency currency;
     [SerializeField] bool touched = false;
     [SerializeField] float timeTouched;
@@ -61,8 +66,9 @@ public class ScoopObject : MonoBehaviour
         }
     }
 
-    public void DestroyFish()
+    void DestroyFish()
     {
+        _event.Invoke();
         Destroy(transform.root.gameObject);
     }
 }

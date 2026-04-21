@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
+    public EventObject eventObject;
+
     [SerializeField] GameObject prefab;
     [SerializeField] Transform spawner;
 
@@ -18,6 +20,7 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObject();
         SpawnObject();
         SpawnObject();
+        eventObject.eventContainer._event.AddListener(SpawnObject);
     }
 
     Vector3 SpawnAtRandomPosition()
