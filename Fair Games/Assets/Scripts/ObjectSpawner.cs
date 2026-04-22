@@ -6,6 +6,8 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] Transform spawner;
     [SerializeField] float increaseHeight = 1f;
+    [SerializeField] float widthPadding = 2f;
+    [SerializeField] float spawnPadding = 2f;
 
     private Vector3 spawnerSize;
     private bool start = false;
@@ -30,9 +32,7 @@ public class ObjectSpawner : MonoBehaviour
         float x = spawnerSize.x / 2;
         float y = spawnerSize.y / 2;
         float z = spawnerSize.z / 2;
-
-        //return spawner.transform.position + new Vector3(Random.Range(-x + (x/4), x - (x/4)), Random.Range(-y + (y/4), y - (y/4)), Random.Range(-z + (z/4), z - (z/4))); 
-        return spawner.transform.position + new Vector3(Random.Range(-x + (x/2), x - (x/2)), Random.Range(-y + (y/2), y - (y/2)), Random.Range(-z + (z/2), z - (z/2)));
+        return spawner.transform.position + new Vector3(Random.Range(-x + (x/spawnPadding), x - (x/spawnPadding)), Random.Range(-y + (y/spawnPadding), y - (y/spawnPadding)), Random.Range(-z + (z/widthPadding), z - (z/widthPadding)));
     }
 
     public void SpawnObject()

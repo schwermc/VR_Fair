@@ -11,6 +11,7 @@ public class ScoopObject : MonoBehaviour, IEventContainer
     [SerializeField] bool touched = false;
     [SerializeField] float timeTouched;
     [SerializeField] float timeAlive;
+    [SerializeField] AudioSource audiosource;
 
     [Header("Code Info")]
     [SerializeField] float minTT = 2f;
@@ -26,7 +27,7 @@ public class ScoopObject : MonoBehaviour, IEventContainer
         }
         timeAlive = Random.Range(100, 300);
         timeTouched = Random.Range(minTT, maxTT);
-        ticketAmount = Mathf.RoundToInt(timeAlive) % 10;
+        ticketAmount = Mathf.RoundToInt(timeAlive) % 5 + 1;
     }
 
     void Update()
@@ -46,6 +47,8 @@ public class ScoopObject : MonoBehaviour, IEventContainer
         if (timeTouched <= 0 && timeAlive > 0)
         {
             currency.addToCurrency(ticketAmount);
+            Debug.Log("Sound");
+            audiosource.Play();
             DestroyFish();
         }
     }
